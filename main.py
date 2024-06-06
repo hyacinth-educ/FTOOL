@@ -4,6 +4,28 @@ from bs4 import BeautifulSoup
 
 from datetime import datetime
 
+# Initialize a dictionary to store usernames and passwords
+user_data = {
+    'kaitodev': '123',
+    # add more users here
+}
+
+def login():
+    # Ask for username
+    username = input("\x1b[1;94m Enter your username: ")
+    
+    # Ask for password
+    password = input("\x1b[1;94m Enter your password: ")
+    
+    # Check if username and password are correct
+    if username in user_data and user_data[username] == password:
+        print("Access granted!")
+    else:
+        print("Access denied!")
+
+# Call the function
+login()
+
 try:
 
     import requests
